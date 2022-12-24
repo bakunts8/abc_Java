@@ -11,5 +11,11 @@ public class Main {
         b = 14;
         c = 10; //height
         System.out.println("the area of the table is equal " + (a + b) / 2 * c);
+
+        //print the digits of a three-digit number
+        int x = 824;
+        System.out.println(x / 100);
+        System.out.println((x % 100) / 10);
+        System.out.println(x % 10);
     }
 }
