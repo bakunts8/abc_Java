@@ -35,5 +35,10 @@ public class Algebra {
         System.out.println(sum_f);
         System.out.println(sum);
 
+        //next task
+
+        double n = 88.147;
+        System.out.println(n % 1);
+
     }
 }
