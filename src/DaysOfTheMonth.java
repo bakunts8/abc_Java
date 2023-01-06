@@ -14,21 +14,22 @@ public class DaysOfTheMonth {
         }
 
         switch (i) {
-            case 1, 3, 5, 7, 8, 10, 12 -> {
+            case 1, 3, 5, 7, 8, 10, 12:
                 x = 31;
+
                 System.out.println(i + " ---this month has " + x + " days");
-            }
-            case 2 -> {
+
+            case 2:
                 x = 28;
                 System.out.println(i + " ---this month has " + x + " or 29 days");
-            }
 
-            case 4, 6, 9, 11 -> {
+
+            case 4, 6, 9, 11:
                 x = 30;
                 System.out.println(i + " ---this month has " + x + " days");
-            }
         }
-
-
     }
 }
+
+
+

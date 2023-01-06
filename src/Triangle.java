@@ -36,11 +36,9 @@ public class Triangle {
                 System.exit(0);
             }
         }
-
         if (c < a + b) {
             System.out.println("Yes it is possible");
         } else
             System.out.println("No, that's not possible");
-
     }
 }
