@@ -1,3 +1,5 @@
+package training1;
+
 public class NewArrays1 {
     public static void main(String[] args) {
 

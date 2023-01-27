@@ -1,3 +1,5 @@
+package training1;
+
 public class TwoDimensionalArrays2 {
     public static void main(String[] args) {
 
