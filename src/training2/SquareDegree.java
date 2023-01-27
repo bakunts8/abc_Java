@@ -10,6 +10,14 @@ public class SquareDegree {
         int a = s.nextInt();
         System.out.println("How many degrees?");
         int b = s.nextInt();
+        if (b < 0) {
+            System.out.println("write positive number");
+            b = s.nextInt();
+        }
+        if (b < 0) {
+            System.out.println("Invalid case");
+            System.exit(0);
+        }
         int summary = square(a, b);
         System.out.println("It is " + summary);
     }
@@ -20,6 +28,8 @@ public class SquareDegree {
             return -1;
         } else if (a < 0) {
             return -2;
+        } else if (b == 0) {
+            return 1;
         }
 
         int result = a;
