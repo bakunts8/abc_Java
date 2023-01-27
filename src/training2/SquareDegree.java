@@ -10,11 +10,11 @@ public class SquareDegree {
         int a = s.nextInt();
         System.out.println("How many degrees?");
         int b = s.nextInt();
-        if (b < 0) {
+        if (b < 0 && b >= -10) {
             System.out.println("write positive number");
             b = s.nextInt();
         }
-        if (b < 0) {
+        if (b < 0 && b >= -10) {
             System.out.println("Invalid case");
             System.exit(0);
         }
