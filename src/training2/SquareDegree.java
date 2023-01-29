@@ -5,24 +5,28 @@ import java.util.Scanner;
 
 public class SquareDegree {
     public static void main(String[] args) {
+
         Scanner s = new Scanner(System.in);
         System.out.println("Which number do you want to square?");
         int a = s.nextInt();
+
+        if (a == 0) {
+            System.out.println("No sense, input again");
+            a = s.nextInt();
+            if (a == 0) {
+                System.out.println("Always zero");
+                System.exit(0);
+            }
+        }
+
         System.out.println("How many degrees?");
         int b = s.nextInt();
-        if (b < 0 && b >= -10) {
-            System.out.println("write positive number");
-            b = s.nextInt();
-        }
-        if (b < 0 && b >= -10) {
-            System.out.println("Invalid case");
-            System.exit(0);
-        }
-        int summary = square(a, b);
-        System.out.println("It is " + summary);
+
+        double summary = square(a, b);
+        System.out.printf("It is " + "%.10f\n", summary);
     }
 
-    static int square(int a, int b) {
+    static double square(int a, int b) {
 
         if (a > 10 || a < -10 || b > 10 || b < -10) {
             return -1;
@@ -30,6 +34,12 @@ public class SquareDegree {
             return -2;
         } else if (b == 0) {
             return 1;
+        } else if (b < 0) {
+            int result = a;
+            for (int i = b + 1; i < 0; i++) {
+                result *= a;
+            }
+            return (double) 1 / result;
         }
 
         int result = a;
