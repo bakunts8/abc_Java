@@ -32,7 +32,7 @@ public class SquareDegree {
 
         int b = s.nextInt();
         double summary = square(a, b);
-        if (summary < 1) {
+        if (summary < 1 && summary > 0) {
             System.out.printf("It is " + "%.10f\n", summary);
         } else {
             System.out.printf("It is " + "%.1f\n", summary);
