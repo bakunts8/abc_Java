@@ -2,7 +2,7 @@ package training2;
 
 public class Armstrong {
     public static void main(String[] args) {
-        int x = 548834;
+        int x = 8208;
         System.out.println(isArm(x));
     }
 

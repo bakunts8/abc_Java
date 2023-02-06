@@ -4,7 +4,7 @@ package training2;
 public class SquareDegree {
     public static void main(String[] args) {
 
-        double summary = square(10, -10);
+        double summary = square(8, 4);
         if (summary == -1) {
             System.out.println("a or b greater");
         } else if(summary == -2) {
