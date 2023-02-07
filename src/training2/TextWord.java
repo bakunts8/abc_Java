@@ -3,12 +3,11 @@ public class TextWord {
     public static void main(String[] args) {
         String text = "This Java tutorial covers basic to advanced concepts related to Java Programming: String";
         String word = "java";
-        System.out.println(compare(text, word));   // Using compareTo
-        System.out.println(checkString(text));     // Using equals
-
+        System.out.println(compare(text, word));
+        System.out.println(compare(text));
     }
 
-    static int compare(String t, String w) {
+    static int transfer(String t, String w) {
         int count = 0;
         String[] str = t.split(" ");
         for (String s : str) {
@@ -17,7 +16,7 @@ public class TextWord {
                 count++;
             }
         }
-        if (w.isEmpty() || t.isEmpty()) {
+        if (t.isEmpty() || w.isEmpty()) {
             return -2;
         } else if (count == 0) {
             return -1;
@@ -25,22 +24,13 @@ public class TextWord {
         return count;
     }
 
-    static int checkString(String t) {
-        int count = 0;
+    static int compare(String t, String w) {
+        return transfer(t, w);
+    }
+
+    static int compare(String t) {
         String word = "string";
-        String[] str = t.split(" ");
-        for (String s : str) {
-            boolean value = s.equalsIgnoreCase(word);
-            if (value) {
-                count++;
-            }
-        }
-        if (t.isEmpty() || word.isEmpty()) {
-            return -2;
-        } else if (count == 0) {
-            return -1;
-        }
-        return count;
+        return transfer(t, word);
     }
-
 }
+
