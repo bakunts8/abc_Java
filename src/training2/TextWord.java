@@ -7,12 +7,12 @@ public class TextWord {
         System.out.println(compare(text));
     }
 
-    static int transfer(String t, String w) {
+    static int compare(String t, String w) {
         int count = 0;
         String[] str = t.split(" ");
         for (String s : str) {
-            int value = s.compareToIgnoreCase(w);
-            if (value == 0) {
+            boolean value = s.equalsIgnoreCase(w);
+            if (value) {
                 count++;
             }
         }
@@ -24,13 +24,9 @@ public class TextWord {
         return count;
     }
 
-    static int compare(String t, String w) {
-        return transfer(t, w);
-    }
-
     static int compare(String t) {
         String word = "string";
-        return transfer(t, word);
+        return compare(t, word);
     }
 }
 
