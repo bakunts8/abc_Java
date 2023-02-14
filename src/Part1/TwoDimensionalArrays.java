@@ -1,6 +1,4 @@
-package training1;
-
-import org.w3c.dom.ls.LSOutput;
+package Part1;
 
 public class TwoDimensionalArrays {
     public static void main(String[] args) {

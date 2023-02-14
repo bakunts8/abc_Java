@@ -1,4 +1,4 @@
-package training1;
+package Part1;
 
 public class Rotate90Degrees {
     public static void main(String[] args) {

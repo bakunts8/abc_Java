@@ -1,4 +1,4 @@
-package training2;
+package Part2;
 
 public class Ascii_2 {
     public static void main(String[] args) {

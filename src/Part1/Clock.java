@@ -1,4 +1,4 @@
-package training1;
+package Part1;
 
 import java.util.Scanner;
 

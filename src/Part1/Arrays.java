@@ -1,6 +1,4 @@
-package training1;
-
-import java.util.Scanner;
+package Part1;
 
 public class Arrays {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package training1;
+package Part1;
 
 public class TwoDimensionalArrays3 {
     public static void main(String[] args) {

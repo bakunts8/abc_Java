@@ -1,5 +1,5 @@
 
-package training2;
+package Part2;
 
 public class SquareDegree {
     public static void main(String[] args) {

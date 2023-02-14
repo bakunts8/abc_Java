@@ -1,4 +1,4 @@
-package training2;
+package Part2;
 
 class City {
     String name = "Not defined";
