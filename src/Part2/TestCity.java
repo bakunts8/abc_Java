@@ -1,18 +1,18 @@
 package Part2;
 
-class City {
+class TestCity {
     String name = "Not defined";
     int population;
     boolean isCapital;
     String country;
 
-    City(int p, boolean is, String c) {
+    TestCity(int p, boolean is, String c) {
         population = p;
         isCapital = is;
         country = c;
     }
 
-    City(String n, int p, boolean is, String c) {
+    TestCity(String n, int p, boolean is, String c) {
         name = n;
         population = p;
         isCapital = is;
@@ -20,7 +20,7 @@ class City {
     }
 
     public static void main(String[] args) {
-        City city = new City(36000000, true, "Japan");
+        TestCity city = new TestCity(36000000, true, "Japan");
 
         if (city.name.equals("Not defined")) {
             city.name = "Tokyo";

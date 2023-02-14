@@ -1,6 +1,6 @@
 package Part2;
 
-public class Ascii {
+public class Ascii1 {
     public static void main(String[] args) {
         char[] charArr = {'q', 'w', 'e', 'r', 't', 'y'};
         int[] intArr = charToInt(charArr);
