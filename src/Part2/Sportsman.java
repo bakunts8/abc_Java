@@ -8,6 +8,10 @@ class Sportsman {
     Sportsman(String n, int... c) {
         name = n;
         for (int point : c) {
+            if (point < 50 || point > 100) {
+                System.out.println("Run again and input 'c' parameter for sportsman between 50 - 100");
+                System.exit(0);
+            }
             sumOfPoints += point;
         }
         averagePoints = (double) sumOfPoints / c.length;
