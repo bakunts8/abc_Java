@@ -1,5 +1,5 @@
 
-package Part2;
+package Part1;
 
 public class SquareDegree {
     public static void main(String[] args) {

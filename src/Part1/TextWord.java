@@ -1,4 +1,4 @@
-package Part2;
+package Part1;
 public class TextWord {
     public static void main(String[] args) {
         String text = "This Java tutorial covers basic to advanced concepts related to Java Programming: String";
