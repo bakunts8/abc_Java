@@ -14,18 +14,20 @@ public class Divisor {
         int min = numbers[0];
 
         // correct the array under these conditions
-        for (int i = 0; i < numbers.length; i++) {
+        for (int num : numbers) {
 
-            if (numbers[i] == 0) {
+            if (num == 0) {
                 System.out.println("Must not be zero in the array");
                 System.exit(1);
-            } else if (numbers[i] < 0) {
-                numbers[i] *= -1;
             }
         }
 
         // finding minimum number
         for (int num : numbers) {
+
+            if (num < 0) {
+                num *= -1;
+            }
 
             if (num < min) {
                 min = num;
