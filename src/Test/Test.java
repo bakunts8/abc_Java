@@ -1,3 +1,4 @@
-package Part1;
+package Test;
+
 public class Test {
 }

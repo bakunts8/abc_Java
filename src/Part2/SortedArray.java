@@ -1,6 +1,6 @@
 package Part2;
 
-public class SortedArray {
+public final class SortedArray {
 
     public static void main(String[] args) {
         int[] array = {5, 12, -23, -23, 12, 5, 5, 12, -23, 12, -23, 5, -23, 12};
