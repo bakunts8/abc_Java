@@ -1,4 +1,4 @@
-package Part3;
+package Part3.one;
 
 public class Person {
 
