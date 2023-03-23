@@ -4,6 +4,13 @@ public class Business extends Standard {
 
     private boolean isCreditAllowed = true;
 
+    Business(String name, long l, int ex, String t) {
+        setCardholderName(name);
+        setCardAccountNumber(l);
+        setExpirationYear(ex);
+        setCardType(t);
+    }
+
     public void credit() {
         if (isCreditAllowed) {
             cashIn(1000000);
@@ -11,5 +18,10 @@ public class Business extends Standard {
         } else {
             System.out.println("You already used it");
         }
+    }
+
+    @Override
+    public void onlineShopping(double money) {
+        super.onlineShopping(0.9 * money);
     }
 }

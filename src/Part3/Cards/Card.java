@@ -3,20 +3,23 @@ package Part3.Cards;
 public class Card {
 
     public static void main(String[] args) {
+        Standard standard = new Standard();
+        Business business = new Business("Khachik Bakunts", 1122334455667788L, 2030, "Business");
+        Gold gold = new Gold("Isaac Newton", 1245782356891245L, 1680, "Gold");
 
-        Standard my_Standard = new Standard();
-        my_Standard.cashIn(50000);
-        my_Standard.cashOut(15000);
-        System.out.println(my_Standard.getBalance());
+        System.out.println(standard);
+        System.out.println(business);
+        System.out.println(gold);
 
-        Business my_business = new Business();
-        my_business.credit();
-        System.out.println(my_business.getBalance());
-        my_business.credit();
-        System.out.println(my_business.getBalance());
+        business.cashIn(100);
+        business.onlineShopping(105);
+        System.out.println(business.getBalance());
 
-        Gold my_gold = new Gold();
-        my_gold.payLunch(15300);
-        System.out.println(my_gold.getExtraBalance());
+        gold.cashOut(50);
+        System.out.println(gold.getBonusPoints());
+
+        gold.cashIn(50);
+        gold.cashOut(30);
+        System.out.println(gold.getBonusPoints());
     }
 }

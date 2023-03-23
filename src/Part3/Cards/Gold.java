@@ -3,6 +3,22 @@ package Part3.Cards;
 public class Gold extends Standard {
 
     private double extraBalance = 100000;
+    private int bonusPoints;
+
+    Gold(String name, long l, int ex, String t) {
+        setCardholderName(name);
+        setCardAccountNumber(l);
+        setExpirationYear(ex);
+        setCardType(t);
+    }
+
+    @Override
+    public void cashOut(double money) {
+        super.cashOut(money);
+        if (isCashOutAllowedInGold) {
+            bonusPoints += 2;
+        }
+    }
 
     public void payLunch(double money) {
         if (extraBalance > money && money >= 0) {
@@ -12,7 +28,12 @@ public class Gold extends Standard {
         }
     }
 
+
     public double getExtraBalance() {
         return extraBalance;
+    }
+
+    public int getBonusPoints() {
+        return bonusPoints;
     }
 }
