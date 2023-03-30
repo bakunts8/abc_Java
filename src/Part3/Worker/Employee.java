@@ -1,6 +1,4 @@
-package Part3.one;
-
-import Part3.one.Person;
+package Part3.Worker;
 
 public class Employee extends Person {
 

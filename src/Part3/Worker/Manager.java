@@ -1,4 +1,4 @@
-package Part3.one;
+package Part3.Worker;
 
 public class Manager extends Employee {
 
