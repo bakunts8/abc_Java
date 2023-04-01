@@ -1,10 +1,10 @@
 package Part3.Cards;
 
-public class Business extends Standard {
+public class Business extends Card {
 
     private boolean isCreditAllowed = true;
 
-    Business(String name, long l, int ex, String t) {
+    public Business(String name, long l, int ex, String t) {
         setCardholderName(name);
         setCardAccountNumber(l);
         setExpirationYear(ex);

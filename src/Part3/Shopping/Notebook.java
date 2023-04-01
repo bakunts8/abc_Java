@@ -1,9 +1,10 @@
 package Part3.Shopping;
 
-public class Notebook extends Computer {
+public abstract class Notebook extends Computer {
 
 
-    public Notebook(String type, int price, int costPrice) {
-        super(type, price, costPrice);
+    public Notebook(String type, int price, int costPrice, int ssd) {
+        super(type, price, costPrice, ssd);
     }
+
 }

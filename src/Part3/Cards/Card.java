@@ -1,25 +1,84 @@
 package Part3.Cards;
 
-public class Card {
+public abstract class Card {
 
-    public static void main(String[] args) {
-        Standard standard = new Standard();
-        Business business = new Business("Khachik Bakunts", 1122334455667788L, 2030, "Business");
-        Gold gold = new Gold("Isaac Newton", 1245782356891245L, 1680, "Gold");
+    private double balance;
+    private String cardholderName;
+    private long cardAccountNumber;
+    private int expirationYear;
+    private String cardType;
 
-        System.out.println(standard);
-        System.out.println(business);
-        System.out.println(gold);
+    // so that the bonus doesn't increase in the event of an invalid condition
+    public boolean isCashOutAllowedInGold = false;
 
-        business.cashIn(100);
-        business.onlineShopping(105);
-        System.out.println(business.getBalance());
 
-        gold.cashOut(50);
-        System.out.println(gold.getBonusPoints());
+    public void cashOut(double money) {
+        if (balance >= money && money >= 0) {
+            balance -= money;
+            isCashOutAllowedInGold = true;
+        } else {
+            System.out.println("Transaction is rejected");
+        }
+    }
 
-        gold.cashIn(50);
-        gold.cashOut(30);
-        System.out.println(gold.getBonusPoints());
+    public void cashIn(double money) {
+        if (money > 0) {
+            balance += money;
+        } else {
+            System.out.println("Transfer failed");
+        }
+    }
+
+    public void onlineShopping(double money) {
+        if (balance >= money && money >= 0) {
+            balance -= money;
+        } else {
+            System.out.println("Shopping is not allowed");
+        }
+    }
+
+    @Override
+    public String toString() {
+        if (getClass().toString().equals("class Part3.Cards.Standard")) {
+            return super.toString();
+        }
+        return getCardholderName() + " " + getCardAccountNumber() + " " + getExpirationYear() + " " + getCardType();
+    }
+
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public String getCardholderName() {
+        return cardholderName;
+    }
+
+    public long getCardAccountNumber() {
+        return cardAccountNumber;
+    }
+
+    public int getExpirationYear() {
+        return expirationYear;
+    }
+
+    public String getCardType() {
+        return cardType;
+    }
+
+    public void setCardholderName(String cardholderName) {
+        this.cardholderName = cardholderName;
+    }
+
+    public void setCardAccountNumber(long cardAccountNumber) {
+        this.cardAccountNumber = cardAccountNumber;
+    }
+
+    public void setExpirationYear(int expirationYear) {
+        this.expirationYear = expirationYear;
+    }
+
+    public void setCardType(String cardType) {
+        this.cardType = cardType;
     }
 }

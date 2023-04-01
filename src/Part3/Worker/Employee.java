@@ -3,7 +3,7 @@ package Part3.Worker;
 public class Employee extends Person {
 
     private String specialization;
-    private int salary;
+    private double salary;
 
     Employee() {
     }
@@ -19,6 +19,7 @@ public class Employee extends Person {
     }
 
 
+
     public void setSpecialization(String specialization) {
         this.specialization = specialization;
     }
@@ -32,7 +33,7 @@ public class Employee extends Person {
         return specialization;
     }
 
-    public int getSalary() {
+    public double getSalary() {
         return salary;
     }
 }

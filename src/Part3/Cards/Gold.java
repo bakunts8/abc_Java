@@ -1,11 +1,11 @@
 package Part3.Cards;
 
-public class Gold extends Standard {
+public class Gold extends Card {
 
     private double extraBalance = 100000;
     private int bonusPoints;
 
-    Gold(String name, long l, int ex, String t) {
+    public Gold(String name, long l, int ex, String t) {
         setCardholderName(name);
         setCardAccountNumber(l);
         setExpirationYear(ex);
@@ -17,6 +17,7 @@ public class Gold extends Standard {
         super.cashOut(money);
         if (isCashOutAllowedInGold) {
             bonusPoints += 2;
+            isCashOutAllowedInGold = false;
         }
     }
 

@@ -1,9 +1,11 @@
 package Part3.Shopping;
 
-public class SmartTV extends TV {
+public abstract class SmartTV extends TV {
 
 
-    public SmartTV(String type, int price, int costPrice) {
-        super(type, price, costPrice);
+    public SmartTV(String type, int price, int costPrice, int screenSize) {
+        super(type, price, costPrice, screenSize);
     }
+
+    public abstract void screenQuality();
 }

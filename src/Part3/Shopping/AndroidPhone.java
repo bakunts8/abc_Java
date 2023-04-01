@@ -1,6 +1,6 @@
 package Part3.Shopping;
 
-public class AndroidPhone extends Phone {
+public abstract class AndroidPhone extends Phone {
 
 
     public AndroidPhone(String type, int price, int costPrice) {

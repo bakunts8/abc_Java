@@ -1,9 +1,9 @@
 package Part3.Shopping;
 
-public class OrdinaryTV extends TV {
+public abstract class OrdinaryTV extends TV {
 
 
-    public OrdinaryTV(String type, int price, int costPrice) {
-        super(type, price, costPrice);
+    public OrdinaryTV(String type, int price, int costPrice, int screenSize) {
+        super(type, price, costPrice, screenSize);
     }
 }

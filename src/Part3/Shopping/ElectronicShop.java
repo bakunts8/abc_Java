@@ -1,8 +1,11 @@
 package Part3.Shopping;
 
+import Part3.Cards.Card;
+
 public class ElectronicShop {
 
-    private static String soldProducts = "You have been sold...";
+    public static Worker worker = new Worker();
+    private static String soldProducts = "You have been sold ";
 
     private static double cashIncome;
     private static double bankIncome;
@@ -11,16 +14,23 @@ public class ElectronicShop {
 
     public static void sell(Product product) {
         System.out.println("You have sold " + product.getType());
-        soldProducts = getSoldProducts().concat(" " + product.getType() + ",");
-        cashIncome += product.profit() - discount(product);
+        worker.salary(product.profit() / 20);
+        soldProducts = getSoldProducts().concat(" " + product.getType() + ": ");
+        cashIncome += product.profit() - discount(product) - (product.profit() / 20);
         generalIncome = cashIncome + bankIncome;
     }
 
-    public static void sellByCard(Product product) {
-        System.out.println("You have sold " + product.getType());
-        soldProducts = getSoldProducts().concat(" " + product.getType() + ",");
-        bankIncome += product.profit() - discount(product);
-        generalIncome = cashIncome + bankIncome;
+    public static void sellByCard(Product product, BankCard card) {
+        if (card.getBalance() > product.getPrice()) {
+            card.cashOut(product.getPrice());
+            System.out.println("You have sold " + product.getType());
+            worker.salary(product.profit() / 20);
+            soldProducts = getSoldProducts().concat(" " + product.getType() + ": ");
+            bankIncome += product.profit() - discount(product) - (product.profit() / 20);
+            generalIncome = cashIncome + bankIncome;
+        } else {
+            System.out.println("Your balance is not enough");
+        }
     }
 
     public static double discount(Product product) {

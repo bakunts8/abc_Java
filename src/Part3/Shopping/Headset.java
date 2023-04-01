@@ -9,6 +9,8 @@ public abstract class Headset extends Product {
 
     @Override
     public void guarantee() {
-        System.out.println("this product have 1 year guarantee");
+        System.out.println("this product have 6 mount guarantee");
     }
+
+    public abstract void volume();
 }

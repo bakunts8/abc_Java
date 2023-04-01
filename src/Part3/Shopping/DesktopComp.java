@@ -1,9 +1,9 @@
 package Part3.Shopping;
 
-public class DesktopComp extends Computer {
+public abstract class DesktopComp extends Computer {
 
-
-    public DesktopComp(String type, int price, int costPrice) {
-        super(type, price, costPrice);
+    public DesktopComp(String type, int price, int costPrice, int ssd) {
+        super(type, price, costPrice, ssd);
     }
+
 }
