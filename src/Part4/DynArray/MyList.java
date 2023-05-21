@@ -1,8 +1,6 @@
-package Part4;
+package Part4.DynArray;
 
 public interface MyList<E> {
-
-//    <E> E[] toArray(E[] array);
 
     int size();
 

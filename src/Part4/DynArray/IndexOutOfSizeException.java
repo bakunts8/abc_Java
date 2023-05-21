@@ -1,4 +1,4 @@
-package Part4;
+package Part4.DynArray;
 
 public class IndexOutOfSizeException extends RuntimeException {
 

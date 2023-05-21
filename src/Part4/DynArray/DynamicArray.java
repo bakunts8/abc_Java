@@ -1,4 +1,4 @@
-package Part4;
+package Part4.DynArray;
 
 
 public class DynamicArray<E> implements MyList<E> {
