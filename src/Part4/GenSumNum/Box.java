@@ -8,11 +8,7 @@ public class Box<T> {
         type = t;
     }
 
-    public <T extends Number> T getType() {
-        return (T) type;
-    }
-
-    public static double sum(Box b1, Box b2) {
-            return b1.getType().doubleValue() + b2.getType().doubleValue();
+    public static double sum(Box<? extends Number> b1, Box<? extends Number> b2) {
+            return b1.type.doubleValue() + b2.type.doubleValue();
         }
 }
