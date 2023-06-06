@@ -6,14 +6,14 @@ public class Test4 {
 
         DynamicArray<Integer> array = new DynamicArray<>(12);
 
-        for (int i = 0; i < 12; i++) {
+        for (int i = 0; i < 10; i++) {
             array.add(i * 2);
         }
 
         System.out.println(array);
         System.out.println(array.size());
 
-        array.add(12, 23);
+        array.add(4, 23);
         System.out.println(array);
         System.out.println(array.size());
 
